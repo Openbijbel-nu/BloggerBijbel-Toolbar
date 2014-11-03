@@ -45,7 +45,7 @@
 
 		var bcv = new bcv_parser;
 
-                alert("32");
+                alert("34");
 		var deorigineletekst = $("h2").html();
 		var dereferenties = bcv.parse(deorigineletekst).osis();
                 alert("c");
@@ -286,6 +286,7 @@
  	 */
  	function main() {
  		showReferences();
+		showReferences();
  		setupTopBar();
 
  		// choose default translation
