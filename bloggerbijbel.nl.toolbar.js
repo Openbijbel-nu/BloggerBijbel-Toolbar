@@ -49,13 +49,24 @@
 	        var deorigineletekst = $(".row h2").html();
 
 	        var dereferenties = bcv.parse(deorigineletekst).osis();
-
-	        var dereferenties = dereferenties.split(",").join("</span><br/><span class='BijbelVers'>")
+                var dereferentie_arr[] = var dereferenties.split("\\.");
+                var dereferentie = dereferentie_arr[0] + "." + dereferentie_arr[1];
+                var firstversereferentie = dereferentie_arr[0] + "." + dereferentie_arr[1] + "." + dereferentie_arr[2];
+                alert(dereferentie);
+	        var dereferenties = dereferenties.split(",").join("</span><br/><span class='BijbelVers'>");
 	        $(".row h2").append("<br/ ><h3 class='OpenBijbel-Heading'>Genoemde Bijbelverzen</h3><br/ ><span class='BijbelVers'>" + dereferenties + "</span>");
 
 		   $(".OpenBijbel-Heading").css("background","#465DFF").css("font-weight","bold").css("color","white");
 		    $(".BijbelVers").css("background","#BCFFB9");
+    
+ 	}
 
+        function showReferences() {
+ 		$("sup").each(function(){
+ 			var suptext = dereferentie + "." + $(this).text();
+ 			$(this).text(suptext);
+		});
+		var startVerse = firstversereferentie;
  	}
 
 	 var refTaggerLoaded = false;
