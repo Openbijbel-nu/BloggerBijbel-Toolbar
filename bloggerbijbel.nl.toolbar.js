@@ -139,7 +139,7 @@
  	 * Split columns
  	 */
  	function splitColumns(extraColumnCount) {
- 		$(".panel").after(
+ 		$(".row").after(
  			'<div class="openbijbelvertalingtekst">'
  				+ '<div id="OpenBijbelEmbeddedBiblia" class="OpenBijbelEmbeddedBiblia">'
 				+ '</div>'
@@ -159,7 +159,7 @@
 		});
 
 		// breedte van translation - 30 voor bij 2 kolommen en 65 bij 1
-		$(".panel").css({
+		$(".row").css({
 				"width": "50%",
 				"float": "left"
 		});
@@ -257,7 +257,7 @@
 		});
 
  		openBijbelToolBar.on('click', '.kiesbibliakolom', function() {
-			$('.panel').css("margin-left","0px");
+			$('.row').css("margin-left","0px");
 			$(this).hide();
 			openBijbelToolBar.find('.kiesreftagtooltip').show();
 			
@@ -267,7 +267,7 @@
  			// doet niks
 			$('.openbijbelvertalingtekst').remove();
 			
-		     $(".panel").css("width","90%");
+		     $(".row").css("width","90%");
 
 			$(this).hide();
 			openBijbelToolBar.find('.kiesbibliakolom').show();
