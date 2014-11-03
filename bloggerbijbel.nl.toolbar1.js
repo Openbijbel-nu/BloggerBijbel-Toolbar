@@ -37,15 +37,15 @@
 
         require("//raw.githubusercontent.com/openbibleinfo/Bible-Passage-Reference-Parser/master/js/nl_bcv_parser.js");
 
+		var bcv = new bcv_parser;
+
  	/**
  	 * Shows references instead of verse numbers
  	 */
 
  	function showReferences() {
 
-		var bcv = new bcv_parser;
-
-                alert("25");
+                alert("26");
 		var deorigineletekst = $("h2").html();
 		var dereferenties = bcv.parse(deorigineletekst).osis();
                 alert("c");
