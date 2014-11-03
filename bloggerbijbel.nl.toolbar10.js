@@ -10,8 +10,6 @@
 		}
 	};
 
-var bcv = new bcv_parser;
-
 // using anonymous self executing function to protect the functions in their own scope
 // see: http://markdalgleish.com/2011/03/self-executing-anonymous-functions/
  (function (window, document, $, undefined) {
@@ -37,6 +35,8 @@ var bcv = new bcv_parser;
 
  	 }
 
+        require("//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js");
+
  	/**
  	 * Shows references instead of verse numbers
  	 */
@@ -47,12 +47,12 @@ var bcv = new bcv_parser;
 	/**
  	  * Loads the Biblia script with a protocol independant URL
  	  */
-	function loadBiblia() {
- 		require('//raw.githubusercontent.com/openbibleinfo/Bible-Passage-Reference-Parser/master/js/nl_bcv_parser.js');
-	}
 
  	function showReferences() {
-		loadBiblia();
+
+ 		require('//raw.githubusercontent.com/openbibleinfo/Bible-Passage-Reference-Parser/master/js/nl_bcv_parser.js');
+
+		var bcv = new bcv_parser;
 
 	        var deorigineletekst = $("h2").html();
 
