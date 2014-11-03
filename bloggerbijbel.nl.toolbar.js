@@ -69,7 +69,7 @@
 
 		var deorigineletekst = $("h2").html();
 		var dereferenties = bcv.parse(deorigineletekst).osis();
-
+		alert("Gods zegen");
 //	        alert(dereferenties);
         	var dereferentie_arr = new Array();
                 var dereferentie_arr = dereferenties.split(".");
