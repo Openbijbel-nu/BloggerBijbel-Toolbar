@@ -42,8 +42,8 @@
  var firstversereferentie;
 
 	function bcvParser() {
-                alert("0337");
-		require('//raw.githubusercontent.com/openbibleinfo/Bible-Passage-Reference-Parser/master/js/nl_bcv_parser.js');
+                alert("0437");
+
                 alert("b");
 		var deorigineletekst = $("h2").html();
 		var bcv = new bcv_parser;
@@ -289,6 +289,7 @@
  	 * This function gets executed after all is loaded. This gives a main entrypoint for the code
  	 */
  	function main() {
+		require('//raw.githubusercontent.com/openbibleinfo/Bible-Passage-Reference-Parser/master/js/nl_bcv_parser.js');
 		bcvParser();
 // 		showReferences();
  		setupTopBar();
