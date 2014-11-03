@@ -45,11 +45,10 @@
 
         require("//raw.githubusercontent.com/openbibleinfo/Bible-Passage-Reference-Parser/master/js/nl_bcv_parser.js");
 
- 	function showReferences() {
-
 	var bcv = new bcv_parser;
 
-		 // specifically for articles on CIP.nl - for testing
+ 	function showReferences() {
+
 	        var deorigineletekst = $("h2").html();
 
 	        var dereferenties = bcv.parse(deorigineletekst).osis();
@@ -183,7 +182,7 @@
  		// add the basics to the stickynotes top bar
  		$(".navbar").prepend("<div class='openbijbeltoolbar'></div>");
 
- 		openBijbelToolBar = $(".stickytop .openbijbeltoolbar");
+ 		openBijbelToolBar = $(".navbar .openbijbeltoolbar");
 
  		// build the basic content of the toolbar
  		var toolbarContent = 
