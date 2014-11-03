@@ -37,7 +37,11 @@
 
         require("//raw.githubusercontent.com/openbibleinfo/Bible-Passage-Reference-Parser/master/js/nl_bcv_parser.js");
 
-		var bcv = new bcv_parser;
+      setTimeout(function() { 
+
+	var bcv = new bcv_parser;
+
+      }, 200); 
 
  	/**
  	 * Shows references instead of verse numbers
@@ -45,7 +49,7 @@
 
  	function showReferences() {
 
-                alert("26");
+                alert("29");
 		var deorigineletekst = $("h2").html();
 		var dereferenties = bcv.parse(deorigineletekst).osis();
                 alert("c");
