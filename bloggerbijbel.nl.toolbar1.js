@@ -10,11 +10,11 @@
 		}
 	};
 
-$.getScript("//raw.githubusercontent.com/openbibleinfo/Bible-Passage-Reference-Parser/master/js/nl_bcv_parser.js");
-
 // using anonymous self executing function to protect the functions in their own scope
 // see: http://markdalgleish.com/2011/03/self-executing-anonymous-functions/
  (function (window, document, $, undefined) {
+
+$.getScript("//raw.githubusercontent.com/openbibleinfo/Bible-Passage-Reference-Parser/master/js/nl_bcv_parser.js");
 
  	/**
  	 * For including scripts
@@ -44,7 +44,7 @@ $.getScript("//raw.githubusercontent.com/openbibleinfo/Bible-Passage-Reference-P
  var firstversereferentie;
 
 	function bcvParser() {
-                alert("09");
+                alert("16");
 
                 alert("b");
 		var deorigineletekst = $("h2").html();
