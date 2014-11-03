@@ -43,7 +43,7 @@
 
 	function bcvParser() {
                 alert("a");
-		require('//raw.githubusercontent.com/openbibleinfo/Bible-Passage-Reference-Parser/master/js/nl_bcv_parser.js'
+		require('//raw.githubusercontent.com/openbibleinfo/Bible-Passage-Reference-Parser/master/js/nl_bcv_parser.js');
                 alert("b");
 		var deorigineletekst = $("h2").html();
 		var bcv = new bcv_parser;
