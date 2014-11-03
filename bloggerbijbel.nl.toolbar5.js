@@ -140,7 +140,7 @@
  	 * Split columns
  	 */
  	function splitColumns(extraColumnCount) {
- 		$(".tr-1").after(
+ 		$(".panel").after(
  			'<div class="openbijbelvertalingtekst">'
  				+ '<div id="OpenBijbelEmbeddedBiblia" class="OpenBijbelEmbeddedBiblia">'
 				+ '</div>'
@@ -181,7 +181,7 @@
  	 */
  	function setupTopBar() {
  		// add the basics to the stickynotes top bar
- 		$(".stickytop").prepend("<div class='openbijbeltoolbar'></div>");
+ 		$(".navbar").prepend("<div class='openbijbeltoolbar'></div>");
 
  		openBijbelToolBar = $(".stickytop .openbijbeltoolbar");
 
