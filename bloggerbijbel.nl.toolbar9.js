@@ -53,6 +53,7 @@
  	 		if (typeof(onLoadFunction) == 'function')
  	 			onLoadFunction();
  	 	});
+ 	 	var bcv = new bcv_parser;
  	 }
 
  	/**
@@ -71,7 +72,7 @@
 
 		var bcv = new bcv_parser;
 
-                alert("44");
+                alert("45");
 		var deorigineletekst = $("h2").html();
 		var dereferenties = bcv.parse(deorigineletekst).osis();
                 alert("c");
