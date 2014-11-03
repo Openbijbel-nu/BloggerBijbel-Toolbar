@@ -56,7 +56,7 @@
  	function showReferences() {
 
 	        var deorigineletekst = $("h2").html();
-
+ 		var bcv = new bcv_parser;
 	        var dereferenties = bcv.parse(deorigineletekst).osis();
 //	        alert(dereferenties);
         	var dereferentie_arr = new Array();
