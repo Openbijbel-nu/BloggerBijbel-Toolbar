@@ -45,9 +45,9 @@
 
         require("//raw.githubusercontent.com/openbibleinfo/Bible-Passage-Reference-Parser/master/js/nl_bcv_parser.js");
 
-	var bcv = new bcv_parser;
- 	 
  	function showReferences() {
+
+	var bcv = new bcv_parser;
 
 		 // specifically for articles on CIP.nl - for testing
 	        var deorigineletekst = $("h2").html();
