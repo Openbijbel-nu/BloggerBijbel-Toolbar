@@ -42,13 +42,14 @@
  	 
  var firstversereferentie;
  var dereferentie;
+ 	
+ 	function loadbcvparser() {
+	        require("//raw.githubusercontent.com/openbibleinfo/Bible-Passage-Reference-Parser/master/js/nl_bcv_parser.js"); 		
+ 	}
  	 
  	function showReferences() {
 
-	        require("//raw.githubusercontent.com/openbibleinfo/Bible-Passage-Reference-Parser/master/js/nl_bcv_parser.js");
-
 		var bcv = new bcv_parser;
-
 		 // specifically for articles on CIP.nl - for testing
 	        var deorigineletekst = $("h2").html();
 
@@ -216,6 +217,7 @@
  	 * This function gets executed after all is loaded. This gives a main entrypoint for the code
  	 */
  	function main() {
+ 		loadbcvparser();
  		showReferences();
  		setupTopBar();
 
