@@ -40,21 +40,15 @@
  	/**
  	 * Shows references instead of verse numbers
  	 */
- 	 
- var firstversereferentie;
-
-	function bcvParser() {
-                alert("20");
-
-                alert("b");
-		var deorigineletekst = $("h2").html();
-		var bcv = new bcv_parser;
-		var dereferenties = bcv.parse(deorigineletekst).osis();
-		                alert("c");
-
-	}
 
  	function showReferences() {
+
+		var bcv = new bcv_parser;
+
+                alert("25");
+		var deorigineletekst = $("h2").html();
+		var dereferenties = bcv.parse(deorigineletekst).osis();
+                alert("c");
 
 //	        alert(dereferenties);
         	var dereferentie_arr = new Array();
@@ -63,10 +57,10 @@
                 var firstversereferentie = dereferentie_arr[0] + "." + dereferentie_arr[1] + "." + dereferentie_arr[2];
 //               alert(dereferentie);
 	        var dereferenties = dereferenties.split(",").join("</span><br/><span class='BijbelVers'>");
-//	        $(".row h2").append("<br/ ><h3 class='OpenBijbel-Heading'>[[|]]</h3><br/ ><span class='BijbelVers'>" + dereferenties + "</span>");
+	        $(".row h2").append("<br/ ><h3 class='OpenBijbel-Heading'>[[|]]</h3><br/ ><span class='BijbelVers'>" + dereferenties + "</span>");
 
-//		   $(".OpenBijbel-Heading").css("background","#465DFF").css("font-weight","bold").css("color","white");
-//	    $(".BijbelVers").css("background","#BCFFB9");
+		   $(".OpenBijbel-Heading").css("background","#465DFF").css("font-weight","bold").css("color","white");
+	    $(".BijbelVers").css("background","#BCFFB9");
     
  		$("sup").each(function(){
  			var suptext = dereferentie + "." + $(this).text();
@@ -291,9 +285,7 @@
  	 * This function gets executed after all is loaded. This gives a main entrypoint for the code
  	 */
  	function main() {
-//		require('//raw.githubusercontent.com/openbibleinfo/Bible-Passage-Reference-Parser/master/js/nl_bcv_parser.js');
-		bcvParser();
-// 		showReferences();
+ 		showReferences();
  		setupTopBar();
 
  		// choose default translation
