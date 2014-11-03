@@ -44,9 +44,26 @@
  var firstversereferentie;
  var dereferentie;
 
-	require("//raw.githubusercontent.com/openbibleinfo/Bible-Passage-Reference-Parser/master/js/nl_bcv_parser.js");
+ 	 var bibliaLoaded = false;
+	/**
+ 	  * Loads the refTagger script with a protocol independant URL
+ 	  */
+ 	 function loadBiblia(onLoadFunction) {
+ 	 	if (bibliaLoaded) {
+ 	 		if (typeof(onLoadFunction) == 'function')
+ 	 			onLoadFunction();
 
-//        require("//raw.githubusercontent.com/openbibleinfo/Bible-Passage-Reference-Parser/master/js/nl_bcv_parser.js");
+ 	 		return;
+ 	 	}
+
+ 	 	require('//raw.githubusercontent.com/openbibleinfo/Bible-Passage-Reference-Parser/master/js/nl_bcv_parser.js', 'openbijbelbibliascript', function () {
+ 	 		bibliaLoaded = true;
+ 	 		var bcv = new bcv_parser;
+ 	 		if (typeof(onLoadFunction) == 'function')
+ 	 			onLoadFunction();
+ 	 	});
+ 	 }
+
 
  	function showReferences() {
 
@@ -287,7 +304,7 @@
  	 * This function gets executed after all is loaded. This gives a main entrypoint for the code
  	 */
  	function main() {
-		var bcv = new bcv_parser;
+		loadBiblia();
  		showReferences();
  		setupTopBar();
 
