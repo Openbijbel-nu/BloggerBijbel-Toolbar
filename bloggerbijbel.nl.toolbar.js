@@ -159,15 +159,9 @@
 		});
 
 		// breedte van translation - 30 voor bij 2 kolommen en 65 bij 1
-		if (extraColumnCount == 1) {
-			$(".translation").css({
-				"width": "58%"
-			});
-		} else if (extraColumnCount == 2) {
-			$(".translation").css({
-				"width": "29%"
-			});
-		}
+		$(".panel").css({
+				"width": "50%"
+		});
 		
  	}
 
@@ -262,8 +256,7 @@
 		});
 
  		openBijbelToolBar.on('click', '.kiesbibliakolom', function() {
- 			splitColumns($('.translation').length);
-			$('.row').css("margin-left","0px");
+			$('.panel').css("margin-left","0px");
 			$(this).hide();
 			openBijbelToolBar.find('.kiesreftagtooltip').show();
 			
@@ -273,15 +266,7 @@
  			// doet niks
 			$('.openbijbelvertalingtekst').remove();
 			
-			// breedte teruggeven op basis van aantal aanwezige kolommen
-
-                        var columnCount = $('.translation').length;
-
-			if (columnCount > 1) {
-			     $(".translation").css("width","45%");
-			} else {
-			     $(".translation").css("width","90%");	
-			}
+		     $(".panel").css("width","90%");
 
 			$(this).hide();
 			openBijbelToolBar.find('.kiesbibliakolom').show();
