@@ -41,6 +41,7 @@
  	 */
  	 
  var firstversereferentie;
+ var dereferentie;
  	 
  	function showReferences() {
 
@@ -64,9 +65,6 @@
 		   $(".OpenBijbel-Heading").css("background","#465DFF").css("font-weight","bold").css("color","white");
 		    $(".BijbelVers").css("background","#BCFFB9");
     
- 	}
-
-        function showReferences() {
  		$("sup").each(function(){
  			var suptext = dereferentie + "." + $(this).text();
  			$(this).text(suptext);
