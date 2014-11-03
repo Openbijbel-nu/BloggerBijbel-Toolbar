@@ -67,7 +67,7 @@
 
 // 49		var bcv = new bcv_parser;
 
-                alert("49");
+                alert("51");
 		var deorigineletekst = $("h2").html();
 		var dereferenties = bcv.parse(deorigineletekst).osis();
                 alert("c");
