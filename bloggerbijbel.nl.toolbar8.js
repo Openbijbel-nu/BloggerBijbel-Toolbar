@@ -44,26 +44,12 @@
  var firstversereferentie;
  var dereferentie;
 
- 	 var bibliaLoaded = false;
 	/**
  	  * Loads the Biblia script with a protocol independant URL
  	  */
- 	 function loadBiblia(onLoadFunction) {
- 	 	if (bibliaLoaded) {
- 	 		if (typeof(onLoadFunction) == 'function')
- 	 			onLoadFunction();
-
- 	 		return;
- 	 	}
-
- 	 	require('//raw.githubusercontent.com/openbibleinfo/Bible-Passage-Reference-Parser/master/js/nl_bcv_parser.js', 'openbijbelbibliascript', function () {
- 	 		bibliaLoaded = true;
- 	 		
- 	 		if (typeof(onLoadFunction) == 'function')
- 	 			onLoadFunction();
- 	 	});
- 	 }
-
+	function loadBiblia() {
+ 		require('//raw.githubusercontent.com/openbibleinfo/Bible-Passage-Reference-Parser/master/js/nl_bcv_parser.js');
+	}
 
  	function showReferences() {
 		loadBiblia();
