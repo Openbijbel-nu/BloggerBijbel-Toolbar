@@ -40,25 +40,15 @@
  	 */
  	 
  var firstversereferentie;
- var dereferentie;
 
+require('//raw.githubusercontent.com/openbibleinfo/Bible-Passage-Reference-Parser/master/js/nl_bcv_parser.js'
+
+	var deorigineletekst = $("h2").html();
+	var bcv = new bcv_parser;
+	var dereferenties = bcv.parse(deorigineletekst).osis();
 
  	function showReferences() {
 
-		/**
-	 	  * Loads the BCV script with a protocol independant URL
- 		  */
-		var bcvLoaded = false;
-		require('//raw.githubusercontent.com/openbibleinfo/Bible-Passage-Reference-Parser/master/js/nl_bcv_parser.js', 'openbijbelbcvscript', function () {
- 	 		bcvLoaded = true;
- 	 		var bcv = new bcv_parser;
- 	 		if (typeof(onLoadFunction) == 'function')
- 	 			onLoadFunction();
- 		 });
-
-	        var deorigineletekst = $("h2").html();
- 		var bcv = new bcv_parser;
-	        var dereferenties = bcv.parse(deorigineletekst).osis();
 //	        alert(dereferenties);
         	var dereferentie_arr = new Array();
                 var dereferentie_arr = dereferenties.split(".");
