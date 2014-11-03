@@ -292,7 +292,7 @@
  	 */
  	function main() {
 
- 		showReferences();
+// 		showReferences();
  		setupTopBar();
 
  		// choose default translation
