@@ -52,14 +52,14 @@
 	        var deorigineletekst = $("h2").html();
 
 	        var dereferenties = bcv.parse(deorigineletekst).osis();
-	        alert(dereferenties);
+//	        alert(dereferenties);
         	var dereferentie_arr = new Array();
                 var dereferentie_arr = dereferenties.split(".");
                 var dereferentie = dereferentie_arr[0] + "." + dereferentie_arr[1];
                 var firstversereferentie = dereferentie_arr[0] + "." + dereferentie_arr[1] + "." + dereferentie_arr[2];
-                alert(dereferentie);
+//               alert(dereferentie);
 	        var dereferenties = dereferenties.split(",").join("</span><br/><span class='BijbelVers'>");
-	        $(".row h2").append("<br/ ><h3 class='OpenBijbel-Heading'>Genoemde Bijbelverzen</h3><br/ ><span class='BijbelVers'>" + dereferenties + "</span>");
+	        $(".row h2").append("<br/ ><h3 class='OpenBijbel-Heading'>[[|]]</h3><br/ ><span class='BijbelVers'>" + dereferenties + "</span>");
 
 		   $(".OpenBijbel-Heading").css("background","#465DFF").css("font-weight","bold").css("color","white");
 		    $(".BijbelVers").css("background","#BCFFB9");
@@ -160,7 +160,8 @@
 
 		// breedte van translation - 30 voor bij 2 kolommen en 65 bij 1
 		$(".panel").css({
-				"width": "50%"
+				"width": "50%",
+				"float": "left"
 		});
 		
  	}
