@@ -42,12 +42,12 @@
  var firstversereferentie;
 
 	function bcvParser() {
-                alert("a");
+                alert("0337");
 		require('//raw.githubusercontent.com/openbibleinfo/Bible-Passage-Reference-Parser/master/js/nl_bcv_parser.js');
                 alert("b");
 		var deorigineletekst = $("h2").html();
-//		var bcv = new bcv_parser;
-//		var dereferenties = bcv.parse(deorigineletekst).osis();
+		var bcv = new bcv_parser;
+		var dereferenties = bcv.parse(deorigineletekst).osis();
 		                alert("c");
 
 	}
