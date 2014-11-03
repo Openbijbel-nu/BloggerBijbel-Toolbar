@@ -41,11 +41,16 @@
  	 
  var firstversereferentie;
 
-require('//raw.githubusercontent.com/openbibleinfo/Bible-Passage-Reference-Parser/master/js/nl_bcv_parser.js'
+	function bcvParser() {
+                alert("a");
+		require('//raw.githubusercontent.com/openbibleinfo/Bible-Passage-Reference-Parser/master/js/nl_bcv_parser.js'
+                alert("b");
+		var deorigineletekst = $("h2").html();
+		var bcv = new bcv_parser;
+		var dereferenties = bcv.parse(deorigineletekst).osis();
+		                alert("c");
 
-	var deorigineletekst = $("h2").html();
-	var bcv = new bcv_parser;
-	var dereferenties = bcv.parse(deorigineletekst).osis();
+	}
 
  	function showReferences() {
 
@@ -284,7 +289,7 @@ require('//raw.githubusercontent.com/openbibleinfo/Bible-Passage-Reference-Parse
  	 * This function gets executed after all is loaded. This gives a main entrypoint for the code
  	 */
  	function main() {
-
+		bcvParser();
  		showReferences();
  		setupTopBar();
 
