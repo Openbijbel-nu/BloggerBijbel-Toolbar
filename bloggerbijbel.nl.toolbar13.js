@@ -152,7 +152,7 @@
 		$('.openbijbelvertaling').text(openBijbelToolBar.find(".openbijbelvertalingnaam").text());
 
 		$(".openbijbelvertalingtekst").css({
-			"float": "right",
+			"float": "left",
 			"width": "400px",
 			"height": "100%",
 			"padding": "10px"
@@ -163,10 +163,6 @@
 				"width": "400px",
 				"float": "left"
 		});
-		$(".container").not(".text-center").css({
-				"width": "400px",
-				"float": "left"
-		});
 		$(".row").css({
 				"width": "400px",
 				"float": "left"
@@ -174,6 +170,9 @@
 		$(".col-md-8").css({
 				"width": "400px",
 				"float": "left"
+		});
+		$(".footer").css({
+				"clear": "both"
 		});
 		
  	}
@@ -283,7 +282,6 @@
  			// doet niks
 			$('.openbijbelvertalingtekst').remove();
 			
-     		     $(".container").not(".text-center").css("width","800px");
      		     $(".panel").css("width","800px");
 		     $(".row").css("width","800px");
      		     $(".col-md-8").css("width","800px");
