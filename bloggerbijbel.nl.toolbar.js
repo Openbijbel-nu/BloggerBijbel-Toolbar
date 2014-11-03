@@ -40,10 +40,7 @@
  	 * Shows references instead of verse numbers
  	 */
  	 
- 	 var dereferentie;
- 	 var dereferentie_arr = new Array();
-  	 var dereferenties;
-  	 var firstversereferentie;
+ var firstversereferentie;
  	 
  	function showReferences() {
 
@@ -52,10 +49,11 @@
 		var bcv = new bcv_parser;
 
 		 // specifically for articles on CIP.nl - for testing
-	        var deorigineletekst = $(".row h2").html();
+	        var deorigineletekst = $("h2").html();
 
 	        var dereferenties = bcv.parse(deorigineletekst).osis();
 	        alert(dereferenties);
+        	var dereferentie_arr = new Array();
                 var dereferentie_arr = dereferenties.split(".");
                 var dereferentie = dereferentie_arr[0] + "." + dereferentie_arr[1];
                 var firstversereferentie = dereferentie_arr[0] + "." + dereferentie_arr[1] + "." + dereferentie_arr[2];
