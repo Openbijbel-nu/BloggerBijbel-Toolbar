@@ -56,7 +56,7 @@
 
 	        var dereferenties = bcv.parse(deorigineletekst).osis();
 	        alert(dereferenties);
-                var dereferentie_arr = dereferenties.split("\\.");
+                var dereferentie_arr = dereferenties.split(".");
                 var dereferentie = dereferentie_arr[0] + "." + dereferentie_arr[1];
                 var firstversereferentie = dereferentie_arr[0] + "." + dereferentie_arr[1] + "." + dereferentie_arr[2];
                 alert(dereferentie);
