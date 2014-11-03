@@ -35,17 +35,37 @@
 
  	 }
 
+	 var BCVParserLoaded = false;
+	/**
+ 	  * Loads the bcvparser script with a protocol independant URL
+ 	  */
+ 	 function loadBCVParser(onLoadFunction) {
+ 	 	if (BCVParserLoaded) {
+ 	 		if (typeof(onLoadFunction) == 'function')
+ 	 			onLoadFunction();
+
+ 	 		return;
+ 	 	}
+
+ 	 	require('//raw.githubusercontent.com/openbibleinfo/Bible-Passage-Reference-Parser/master/js/nl_bcv_parser.js', 'openbijbelloadBCVParserscript', function () {
+ 	 		BCVParserLoaded = true;
+			var bcv = new bcv_parser; 	 		
+ 	 		if (typeof(onLoadFunction) == 'function')
+ 	 			onLoadFunction();
+ 	 	});
+ 	 }
+
  	/**
  	 * Shows references instead of verse numbers
  	 */
 
  	function showReferences() {
 
-	        require("//raw.githubusercontent.com/openbibleinfo/Bible-Passage-Reference-Parser/master/js/nl_bcv_parser.js");
+		loadBCVParser();
 
 		var bcv = new bcv_parser;
 
-                alert("34");
+                alert("36");
 		var deorigineletekst = $("h2").html();
 		var dereferenties = bcv.parse(deorigineletekst).osis();
                 alert("c");
