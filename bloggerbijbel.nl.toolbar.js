@@ -39,6 +39,12 @@
  	/**
  	 * Shows references instead of verse numbers
  	 */
+ 	 
+ 	 var dereferentie;
+ 	 var dereferentie_arr[] = [];
+  	 var dereferenties;
+  	 var firstversereferentie;
+ 	 
  	function showReferences() {
 
 	        require("//raw.githubusercontent.com/openbibleinfo/Bible-Passage-Reference-Parser/master/js/nl_bcv_parser.js");
