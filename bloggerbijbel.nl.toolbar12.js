@@ -35,21 +35,17 @@
 
  	 }
 
-        require("//raw.githubusercontent.com/openbibleinfo/Bible-Passage-Reference-Parser/master/js/nl_bcv_parser.js");
-
-      setTimeout(function() { 
-
-	var bcv = new bcv_parser;
-
-      }, 200); 
-
  	/**
  	 * Shows references instead of verse numbers
  	 */
 
  	function showReferences() {
 
-                alert("29");
+	        require("//raw.githubusercontent.com/openbibleinfo/Bible-Passage-Reference-Parser/master/js/nl_bcv_parser.js");
+
+		var bcv = new bcv_parser;
+
+                alert("32");
 		var deorigineletekst = $("h2").html();
 		var dereferenties = bcv.parse(deorigineletekst).osis();
                 alert("c");
