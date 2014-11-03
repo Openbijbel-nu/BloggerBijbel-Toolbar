@@ -138,7 +138,7 @@
  	/**
  	 * Split columns
  	 */
- 	function splitColumns(extraColumnCount) {
+ 	function splitColumns() {
  		$(".panel").after(
  			'<div class="openbijbelvertalingtekst">'
  				+ '<div id="OpenBijbelEmbeddedBiblia" class="OpenBijbelEmbeddedBiblia">'
@@ -272,6 +272,7 @@
 		});
 
  		openBijbelToolBar.on('click', '.kiesbibliakolom', function() {
+ 			splitColumns();
 			$('.row').css("margin-left","0px");
 			$(this).hide();
 			openBijbelToolBar.find('.kiesreftagtooltip').show();
