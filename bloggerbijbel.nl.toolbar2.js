@@ -62,10 +62,10 @@
  	function showReferences() {
 
 		loadBCVParser(function () {
-//			var bcv = new bcv_parser; 
+			var bcv = new bcv_parser; 
 		});
 
-		var bcv = new bcv_parser;
+// 49		var bcv = new bcv_parser;
 
                 alert("49");
 		var deorigineletekst = $("h2").html();
