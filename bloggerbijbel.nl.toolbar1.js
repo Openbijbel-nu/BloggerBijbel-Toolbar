@@ -42,6 +42,7 @@
  	 
  var firstversereferentie;
  var dereferentie;
+ var bcv;
 
         require("//raw.githubusercontent.com/openbibleinfo/Bible-Passage-Reference-Parser/master/js/nl_bcv_parser.js");
 
@@ -127,7 +128,7 @@
  	 */
 	function embedBiblia() {
 		var startVerse = $("sup").first().text();
-		$(".OpenBijbelEmbeddedBiblia").html('<biblia:bible layout="minimal" resource="niv2011" width="100%" height="100%" startingReference="' + startVerse + '"></biblia:bible>');
+		$(".OpenBijbelEmbeddedBiblia").html('<biblia:bible layout="minimal" resource="niv2011" width="100%" height="1200px" startingReference="' + startVerse + '"></biblia:bible>');
 		
 		var url = "//biblia.com/api/logos.biblia.js";
 		$.getScript( url, function() {
