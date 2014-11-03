@@ -163,7 +163,7 @@
 				"width": "400px",
 				"float": "left"
 		});
-		$(".container").css({
+		$(".container").not(".text-center").css({
 				"width": "400px",
 				"float": "left"
 		});
@@ -283,7 +283,7 @@
  			// doet niks
 			$('.openbijbelvertalingtekst').remove();
 			
-     		     $(".container").css("width","800px");
+     		     $(".container").not(".text-center").css("width","800px");
      		     $(".panel").css("width","800px");
 		     $(".row").css("width","800px");
      		     $(".col-md-8").css("width","800px");
