@@ -42,13 +42,15 @@
  	 
  var firstversereferentie;
  var dereferentie;
- var bcv;
 
-        require("//raw.githubusercontent.com/openbibleinfo/Bible-Passage-Reference-Parser/master/js/nl_bcv_parser.js");
+var bcv_parser = require("//raw.githubusercontent.com/openbibleinfo/Bible-Passage-Reference-Parser/master/js/nl_bcv_parser.js").bcv_parser;
+var bcv = new bcv_parser;
+
+//        require("//raw.githubusercontent.com/openbibleinfo/Bible-Passage-Reference-Parser/master/js/nl_bcv_parser.js");
 
  	function showReferences() {
 
-		var bcv = new bcv_parser;
+//		var bcv = new bcv_parser;
 
 	        var deorigineletekst = $("h2").html();
 
