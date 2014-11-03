@@ -128,7 +128,7 @@
  	 * Adds a Biblia embedment in the extra column
  	 */
 	function embedBiblia() {
-		var startVerse = $("sup").first().text();
+		var startVerse = $(".vers sup").first().text();
 		alert(startVerse);
 		$(".OpenBijbelEmbeddedBiblia").html('<biblia:bible layout="minimal" resource="niv2011" width="100%" height="1200px" startingReference="' + startVerse + '"></biblia:bible>');
 		
