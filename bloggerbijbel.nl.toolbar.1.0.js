@@ -66,7 +66,7 @@
 		});
 		alert("Gods zegen");
 		var bcv = new bcv_parser;
-		alert("57");
+		alert("59");
 		var deorigineletekst = $("h2").html();
 		var dereferenties = bcv.parse(deorigineletekst).osis();
 
