@@ -49,6 +49,7 @@
 	        var deorigineletekst = $(".row h2").html();
 
 	        var dereferenties = bcv.parse(deorigineletekst).osis();
+	        alert(dereferenties);
                 var dereferentie_arr[] = var dereferenties.split("\\.");
                 var dereferentie = dereferentie_arr[0] + "." + dereferentie_arr[1];
                 var firstversereferentie = dereferentie_arr[0] + "." + dereferentie_arr[1] + "." + dereferentie_arr[2];
