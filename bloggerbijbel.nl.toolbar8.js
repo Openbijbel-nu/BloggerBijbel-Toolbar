@@ -69,9 +69,9 @@
 			var bcv = new bcv_parser; 
 		});
 
-//		var bcv = new bcv_parser;
+		var bcv = new bcv_parser;
 
-                alert("40");
+                alert("44");
 		var deorigineletekst = $("h2").html();
 		var dereferenties = bcv.parse(deorigineletekst).osis();
                 alert("c");
