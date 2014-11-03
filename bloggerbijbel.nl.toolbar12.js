@@ -35,8 +35,6 @@
 
  	 }
 
-        require("//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js");
-
  	/**
  	 * Shows references instead of verse numbers
  	 */
@@ -48,9 +46,9 @@
  	  * Loads the Biblia script with a protocol independant URL
  	  */
 
- 	function showReferences() {
+	require('//raw.githubusercontent.com/openbibleinfo/Bible-Passage-Reference-Parser/master/js/nl_bcv_parser.js');
 
- 		require('//raw.githubusercontent.com/openbibleinfo/Bible-Passage-Reference-Parser/master/js/nl_bcv_parser.js');
+ 	function showReferences() {
 
 		var bcv = new bcv_parser;
 
