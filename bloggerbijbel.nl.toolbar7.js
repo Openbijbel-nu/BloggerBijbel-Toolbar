@@ -58,7 +58,7 @@
 
  	 	require('//raw.githubusercontent.com/openbibleinfo/Bible-Passage-Reference-Parser/master/js/nl_bcv_parser.js', 'openbijbelbibliascript', function () {
  	 		bibliaLoaded = true;
- 	 		var bcv = new bcv_parser;
+ 	 		
  	 		if (typeof(onLoadFunction) == 'function')
  	 			onLoadFunction();
  	 	});
@@ -67,6 +67,7 @@
 
  	function showReferences() {
 
+ 		var bcv = new bcv_parser;
 	        var deorigineletekst = $("h2").html();
 
 	        var dereferenties = bcv.parse(deorigineletekst).osis();
