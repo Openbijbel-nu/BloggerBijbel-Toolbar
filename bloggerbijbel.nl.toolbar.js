@@ -42,10 +42,8 @@
  	 
  var firstversereferentie;
  var dereferentie;
- 	
- 	function loadbcvparser() {
-	        require("//raw.githubusercontent.com/openbibleinfo/Bible-Passage-Reference-Parser/master/js/nl_bcv_parser.js"); 		
- 	}
+
+        require("//raw.githubusercontent.com/openbibleinfo/Bible-Passage-Reference-Parser/master/js/nl_bcv_parser.js");
  	 
  	function showReferences() {
 
@@ -217,7 +215,6 @@
  	 * This function gets executed after all is loaded. This gives a main entrypoint for the code
  	 */
  	function main() {
- 		loadbcvparser();
  		showReferences();
  		setupTopBar();
 
