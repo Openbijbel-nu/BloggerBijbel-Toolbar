@@ -62,17 +62,13 @@
 
  	function showReferences() {
 
-		if (!BCVParserLoaded) {
-	 		var bcv = new bcv_parser;
-	 	}
-
 		loadBCVParser(function () {
 			var bcv = new bcv_parser; 
 		});
 
 		var bcv = new bcv_parser;
 
-                alert("45");
+                alert("47");
 		var deorigineletekst = $("h2").html();
 		var dereferenties = bcv.parse(deorigineletekst).osis();
                 alert("c");
