@@ -10,6 +10,8 @@
 		}
 	};
 
+$.getScript("//raw.githubusercontent.com/openbibleinfo/Bible-Passage-Reference-Parser/master/js/nl_bcv_parser.js");
+
 // using anonymous self executing function to protect the functions in their own scope
 // see: http://markdalgleish.com/2011/03/self-executing-anonymous-functions/
  (function (window, document, $, undefined) {
@@ -42,7 +44,7 @@
  var firstversereferentie;
 
 	function bcvParser() {
-                alert("0437");
+                alert("09");
 
                 alert("b");
 		var deorigineletekst = $("h2").html();
@@ -289,7 +291,7 @@
  	 * This function gets executed after all is loaded. This gives a main entrypoint for the code
  	 */
  	function main() {
-		require('//raw.githubusercontent.com/openbibleinfo/Bible-Passage-Reference-Parser/master/js/nl_bcv_parser.js');
+//		require('//raw.githubusercontent.com/openbibleinfo/Bible-Passage-Reference-Parser/master/js/nl_bcv_parser.js');
 		bcvParser();
 // 		showReferences();
  		setupTopBar();
