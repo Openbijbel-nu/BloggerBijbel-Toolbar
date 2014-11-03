@@ -214,6 +214,9 @@
 			"float":"left",
 			"color": "white"
 		});
+		openBijbelToolBar.find(".kiesreftagtooltip").css({
+			"display":"none",
+		});
 
 		openBijbelToolBar.find(".openbijbelknoppenarea").css({
 			"color": "white",
