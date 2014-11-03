@@ -127,7 +127,7 @@
  	 */
 	function embedBiblia() {
 		var startVerse = $("sup").first().text();
-		$(".OpenBijbelEmbeddedBiblia").html('<biblia:bible layout="minimal" resource="niv2011" width="400px" height="1200px" startingReference="' + startVerse + '"></biblia:bible>');
+		$(".OpenBijbelEmbeddedBiblia").html('<biblia:bible layout="minimal" resource="niv2011" width="100%" height="100%" startingReference="' + startVerse + '"></biblia:bible>');
 		
 		var url = "//biblia.com/api/logos.biblia.js";
 		$.getScript( url, function() {
