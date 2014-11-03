@@ -1,5 +1,5 @@
 /**
- * This code is used to create an toolbar for debijbel.nl
+ * This code is used to create an toolbar for bloggersbijbel.nl
  */
 
  //global reftagger settings (default settings)
@@ -10,7 +10,7 @@
 		}
 	};
 
-
+var bcv = new bcv_parser;
 
 // using anonymous self executing function to protect the functions in their own scope
 // see: http://markdalgleish.com/2011/03/self-executing-anonymous-functions/
@@ -53,7 +53,7 @@
 
  	function showReferences() {
 		loadBiblia();
- 		var bcv = new bcv_parser;
+
 	        var deorigineletekst = $("h2").html();
 
 	        var dereferenties = bcv.parse(deorigineletekst).osis();
