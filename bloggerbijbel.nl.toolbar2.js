@@ -42,18 +42,19 @@
  var firstversereferentie;
  var dereferentie;
 
-	/**
- 	  * Loads the Biblia script with a protocol independant URL
- 	  */
-	var bibliaLoaded = false;
-	require('//raw.githubusercontent.com/openbibleinfo/Bible-Passage-Reference-Parser/master/js/nl_bcv_parser.js', 'openbijbelbibliascript', function () {
- 	 		bibliaLoaded = true;
+
+ 	function showReferences() {
+
+		/**
+	 	  * Loads the BCV script with a protocol independant URL
+ 		  */
+		var bcvLoaded = false;
+		require('//raw.githubusercontent.com/openbibleinfo/Bible-Passage-Reference-Parser/master/js/nl_bcv_parser.js', 'openbijbelbcvscript', function () {
+ 	 		bcvLoaded = true;
  	 		var bcv = new bcv_parser;
  	 		if (typeof(onLoadFunction) == 'function')
  	 			onLoadFunction();
- 	 });
-
- 	function showReferences() {
+ 		 });
 
 	        var deorigineletekst = $("h2").html();
  		var bcv = new bcv_parser;
