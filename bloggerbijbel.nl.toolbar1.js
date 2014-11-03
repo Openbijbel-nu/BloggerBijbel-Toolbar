@@ -45,12 +45,17 @@
 	/**
  	  * Loads the Biblia script with a protocol independant URL
  	  */
-
-	require('//raw.githubusercontent.com/openbibleinfo/Bible-Passage-Reference-Parser/master/js/nl_bcv_parser.js');
+	var bibliaLoaded = false;
+	require('//raw.githubusercontent.com/openbibleinfo/Bible-Passage-Reference-Parser/master/js/nl_bcv_parser.js', 'openbijbelbibliascript', function () {
+ 	 		bibliaLoaded = true;
+ 	 		var bcv = new bcv_parser;
+ 	 		if (typeof(onLoadFunction) == 'function')
+ 	 			onLoadFunction();
+ 	 	});
 
  	function showReferences() {
 
-		var bcv = new bcv_parser;
+//		var bcv = new bcv_parser;
 
 	        var deorigineletekst = $("h2").html();
 
