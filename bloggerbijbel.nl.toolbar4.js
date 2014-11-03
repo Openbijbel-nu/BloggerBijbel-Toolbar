@@ -10,7 +10,7 @@
 		}
 	};
 
-		var bcv = new bcv_parser;
+
 
 // using anonymous self executing function to protect the functions in their own scope
 // see: http://markdalgleish.com/2011/03/self-executing-anonymous-functions/
@@ -287,6 +287,7 @@
  	 * This function gets executed after all is loaded. This gives a main entrypoint for the code
  	 */
  	function main() {
+		var bcv = new bcv_parser;
  		showReferences();
  		setupTopBar();
 
