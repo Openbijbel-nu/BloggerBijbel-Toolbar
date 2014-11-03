@@ -139,7 +139,7 @@
  	 * Split columns
  	 */
  	function splitColumns(extraColumnCount) {
- 		$(".row").after(
+ 		$(".col-md-8").after(
  			'<div class="openbijbelvertalingtekst">'
  				+ '<div id="OpenBijbelEmbeddedBiblia" class="OpenBijbelEmbeddedBiblia">'
 				+ '</div>'
@@ -153,14 +153,18 @@
 
 		$(".openbijbelvertalingtekst").css({
 			"float": "right",
-			"width": "40%",
+			"width": "400px",
 			"height": "100%",
 			"padding": "10px"
 		});
 
 		// breedte van translation - 30 voor bij 2 kolommen en 65 bij 1
 		$(".row").css({
-				"width": "50%",
+				"width": "400px",
+				"float": "left"
+		});
+		$(".col-md-8").css({
+				"width": "400px",
 				"float": "left"
 		});
 		
@@ -270,7 +274,8 @@
  			// doet niks
 			$('.openbijbelvertalingtekst').remove();
 			
-		     $(".row").css("width","90%");
+		     $(".row").css("width","800px");
+     		     $(".col-md-8").css("width","800px");
 
 			$(this).hide();
 			openBijbelToolBar.find('.kiesbibliakolom').show();
