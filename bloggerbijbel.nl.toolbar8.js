@@ -46,7 +46,7 @@
 
  	 var bibliaLoaded = false;
 	/**
- 	  * Loads the refTagger script with a protocol independant URL
+ 	  * Loads the Biblia script with a protocol independant URL
  	  */
  	 function loadBiblia(onLoadFunction) {
  	 	if (bibliaLoaded) {
@@ -66,7 +66,7 @@
 
 
  	function showReferences() {
-
+		loadBiblia();
  		var bcv = new bcv_parser;
 	        var deorigineletekst = $("h2").html();
 
@@ -305,7 +305,7 @@
  	 * This function gets executed after all is loaded. This gives a main entrypoint for the code
  	 */
  	function main() {
-		loadBiblia();
+
  		showReferences();
  		setupTopBar();
 
