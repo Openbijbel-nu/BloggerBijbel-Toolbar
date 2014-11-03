@@ -65,12 +65,10 @@
 			var bcv = new bcv_parser; 
 		});
 
-// 49		var bcv = new bcv_parser;
+		var bcv = new bcv_parser;
 
-                alert("51");
 		var deorigineletekst = $("h2").html();
 		var dereferenties = bcv.parse(deorigineletekst).osis();
-                alert("c");
 
 //	        alert(dereferenties);
         	var dereferentie_arr = new Array();
@@ -79,12 +77,12 @@
                 var firstversereferentie = dereferentie_arr[0] + "." + dereferentie_arr[1] + "." + dereferentie_arr[2];
 //               alert(dereferentie);
 	        var dereferenties = dereferenties.split(",").join("</span><br/><span class='BijbelVers'>");
-	        $(".row h2").append("<br/ ><h3 class='OpenBijbel-Heading'>[[|]]</h3><br/ ><span class='BijbelVers'>" + dereferenties + "</span>");
+//	        $(".row h2").append("<br/ ><h3 class='OpenBijbel-Heading'>[[|]]</h3><br/ ><span class='BijbelVers'>" + dereferenties + "</span>");
 
-		   $(".OpenBijbel-Heading").css("background","#465DFF").css("font-weight","bold").css("color","white");
-	    $(".BijbelVers").css("background","#BCFFB9");
+//		   $(".OpenBijbel-Heading").css("background","#465DFF").css("font-weight","bold").css("color","white");
+//	    $(".BijbelVers").css("background","#BCFFB9");
     
- 		$("sup").each(function(){
+ 		$(".vers sup").each(function(){
  			var suptext = dereferentie + "." + $(this).text();
  			$(this).text(suptext);
 		});
@@ -147,7 +145,7 @@
  	 */
 	function embedBiblia() {
 		var startVerse = $(".vers sup").first().text();
-		alert(startVerse);
+//		alert(startVerse);
 		$(".OpenBijbelEmbeddedBiblia").html('<biblia:bible layout="minimal" resource="niv2011" width="100%" height="1200px" startingReference="' + startVerse + '"></biblia:bible>');
 		
 		var url = "//biblia.com/api/logos.biblia.js";
