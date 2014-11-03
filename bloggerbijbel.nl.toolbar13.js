@@ -153,22 +153,14 @@
 
 		$(".openbijbelvertalingtekst").css({
 			"float": "left",
-			"width": "400px",
+			"width": "45%",
 			"height": "100%",
 			"padding": "10px"
 		});
 
 		// breedte van translation - 30 voor bij 2 kolommen en 65 bij 1
 		$(".panel").css({
-				"width": "400px",
-				"float": "left"
-		});
-		$(".row").css({
-				"width": "400px",
-				"float": "left"
-		});
-		$(".col-md-8").css({
-				"width": "400px",
+				"width": "50%",
 				"float": "left"
 		});
 		$(".footer").css({
@@ -282,9 +274,7 @@
  			// doet niks
 			$('.openbijbelvertalingtekst').remove();
 			
-     		     $(".panel").css("width","800px");
-		     $(".row").css("width","800px");
-     		     $(".col-md-8").css("width","800px");
+     		     $(".panel").css("width","100%");
 
 			$(this).hide();
 			openBijbelToolBar.find('.kiesbibliakolom').show();
