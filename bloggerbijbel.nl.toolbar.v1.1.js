@@ -1,4 +1,4 @@
-console.log("0.9");
+console.log("1.1");
 /**
  * This code is used to create an toolbar for bloggersbijbel.nl
  */
@@ -64,24 +64,6 @@ console.log("0.9");
 
 	 var refTaggerLoaded = false;
 
-	/**
- 	  * Loads the refTagger script with a protocol independant URL
- 	  */
- 	 function loadRefTagger(onLoadFunction) {
- 	 	if (refTaggerLoaded) {
- 	 		if (typeof(onLoadFunction) == 'function')
- 	 			onLoadFunction();
-
- 	 		return;
- 	 	}
-
- 	 	require('//api.reftagger.com/v2/RefTagger.js', 'openbijbelreftaggerscript', function () {
- 	 		refTaggerLoaded = true;
- 	 		
- 	 		if (typeof(onLoadFunction) == 'function')
- 	 			onLoadFunction();
- 	 	});
- 	 }
 
  	function showReferences() {
 
@@ -106,6 +88,25 @@ console.log("0.9");
  				$(this).text(suptext);
 			});
 
+			/**
+		 	  * Loads the refTagger script with a protocol independant URL
+		 	  */
+		 	 function loadRefTagger(onLoadFunction) {
+		 	 	if (refTaggerLoaded) {
+		 	 		if (typeof(onLoadFunction) == 'function')
+		 	 			onLoadFunction();
+		
+		 	 		return;
+		 	 	}
+		
+		 	 	require('//api.reftagger.com/v2/RefTagger.js', 'openbijbelreftaggerscript', function () {
+		 	 		refTaggerLoaded = true;
+		 	 		
+		 	 		if (typeof(onLoadFunction) == 'function')
+		 	 			onLoadFunction();
+		 	 	});
+		 	 }
+
 			function transformSup() {
 				loadRefTagger();
 				console.log("reftagger");
@@ -116,6 +117,27 @@ console.log("0.9");
 		});
  	}
 
+	 var refTaggerLoaded2 = false;
+	 
+	/**
+ 	  * Loads the refTagger script with a protocol independant URL
+ 	  */
+ 	 function loadRefTagger2(onLoadFunction) {
+ 	 	if (refTaggerLoaded2) {
+ 	 		if (typeof(onLoadFunction) == 'function')
+ 	 			onLoadFunction();
+
+ 	 		return;
+ 	 	}
+
+ 	 	require('//api.reftagger.com/v2/RefTagger.js', 'openbijbelreftaggerscript', function () {
+ 	 		refTaggerLoaded2 = true;
+ 	 		
+ 	 		if (typeof(onLoadFunction) == 'function')
+ 	 			onLoadFunction();
+ 	 	});
+ 	 }
+
  	 /**
  	  * Loads the bible translation. By default it's NIV.
  	  */
@@ -125,7 +147,7 @@ console.log("0.9");
  		}
 
  		// set the already existing global variable with new options (so no var before this variable)
- 		if (!refTaggerLoaded)
+ 		if (!refTaggerLoaded2)
 	 		refTagger = {
 				settings: {
 					bibleReader: "bible.faithlife",
@@ -133,7 +155,7 @@ console.log("0.9");
 				}
 			};
 
-		loadRefTagger(function () {
+		loadRefTagger2(function () {
 			$(".rtBibleRef").each(function(){
 				$(this).attr("data-version", translation.toLowerCase());
 			});
