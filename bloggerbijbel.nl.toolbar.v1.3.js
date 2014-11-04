@@ -1,3 +1,4 @@
+console.log("1.3");
 /**
  * This code is used to create an toolbar for bloggersbijbel.nl
  */
@@ -82,12 +83,11 @@
 //		$(".OpenBijbel-Heading").css("background","#465DFF").css("font-weight","bold").css("color","white");
 //		$(".BijbelVers").css("background","#BCFFB9");
     
- 		$(".vers sup").each(function(){
- 			var suptext = dereferentie + "." + $(this).text();
- 			$(this).text(suptext);
+	 		$(".vers sup").each(function(){
+ 				var suptext = dereferentie + "." + $(this).text();
+ 				$(this).text(suptext);
+			});
 		});
-		});
-		
  	}
 
 	 var refTaggerLoaded = false;
@@ -111,6 +111,9 @@
  	 	});
  	 }
 
+	function tranformSup() {
+		loadRefTagger();
+	}
  	 /**
  	  * Loads the bible translation. By default it's NIV.
  	  */
@@ -307,8 +310,9 @@
  	 */
  	function main() {
  		showReferences();
+ 		tranformSup();
  		setupTopBar();
-		loadRefTagger();
+ 		
  		// choose default translation
  		chooseTranslation("NIV");
 
