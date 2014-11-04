@@ -59,7 +59,7 @@
  	 * Shows references instead of verse numbers
  	 */
 
-	alert("a125");
+	alert("a127");
 
  	function showReferences() {
 	alert("b");
@@ -68,7 +68,7 @@
 //			var bcv = new bcv_parser;	  
  		}
  	alert("c");
-		
+		var bcv;
 		loadBCVParser(function () {
 			var bcv = new bcv_parser; 
 		});
