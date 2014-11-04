@@ -59,7 +59,7 @@
  	 * Shows references instead of verse numbers
  	 */
 
-	alert("a127");
+	alert("a128");
 
  	function showReferences() {
 	alert("b");
@@ -68,12 +68,13 @@
 //			var bcv = new bcv_parser;	  
  		}
  	alert("c");
-		var bcv;
+
 		loadBCVParser(function () {
 			var bcv = new bcv_parser; 
 		});
 		alert("d");
-//		var bcv = new bcv_parser;
+		var bcv_parser = require("//raw.githubusercontent.com/openbibleinfo/Bible-Passage-Reference-Parser/master/js/nl_bcv_parser.js").bcv_parser;
+		var bcv = new bcv_parser;
 		alert("Gods zegen");
 		var deorigineletekst = $("h2").html();
 		var dereferenties = bcv.parse(deorigineletekst).osis();
