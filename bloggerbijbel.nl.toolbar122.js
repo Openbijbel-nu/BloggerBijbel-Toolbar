@@ -65,7 +65,7 @@
 	alert("b");
  		
 		if (!refTaggerLoaded) {
-			var bcv = new bcv_parser;	  
+//			var bcv = new bcv_parser;	  
  		}
  	alert("c");
 		
