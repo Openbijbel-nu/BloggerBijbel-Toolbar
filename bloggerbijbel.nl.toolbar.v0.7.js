@@ -1,4 +1,4 @@
-console.log("1.6");
+console.log("0.7");
 /**
  * This code is used to create an toolbar for bloggersbijbel.nl
  */
@@ -62,10 +62,10 @@ console.log("1.6");
 
 	console.log("Gods zegen");
 
- 	function showReferences() {
+	 var refTaggerLoaded = false;
 
-//		if (!refTaggerLoaded) {
-// 		}
+
+ 	function showReferences() {
 
 		loadBCVParser(function () {
 			var bcv = new bcv_parser;
@@ -88,8 +88,6 @@ console.log("1.6");
  				$(this).text(suptext);
 			});
 
-			 var refTaggerLoaded = false;
-		
 		 	 /**
 		 	  * Loads the refTagger script with a protocol independant URL
 		 	  */
