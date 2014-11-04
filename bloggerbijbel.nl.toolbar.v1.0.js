@@ -1,4 +1,4 @@
-console.log("v1.0.5");
+console.log("v1.0");
 /**
  * This code is used to create an toolbar for bloggersbijbel.nl
  */
