@@ -1,4 +1,4 @@
-console.log("v1.0.3");
+console.log("v1.0.4");
 /**
  * This code is used to create an toolbar for bloggersbijbel.nl
  */
@@ -124,7 +124,26 @@ console.log("v1.0.3");
 		});
 	}
 
-		 var refTaggerLoaded = false;
+	var refTaggerTransformed = false;
+	
+		/**
+	 	  * Loads the refTagger script with a protocol independant URL
+	 	  */
+	 	 function transformRefTagger(onLoadFunction) {
+	 	 	if (refTaggerTransformed) {
+	 	 		if (typeof(onLoadFunction) == 'function')
+	 	 			onLoadFunction();
+	
+	 	 		return;
+	 	 	}
+	
+	 	 	require('//api.reftagger.com/v2/RefTagger.js', 'openbijbelreftaggerscript', function () {
+	 	 		refTaggerTransformed = true;
+	 	 		
+	 	 		if (typeof(onLoadFunction) == 'function')
+	 	 			onLoadFunction();
+	 	 	});
+	 	 }
 
  	 /**
  	  * Loads the bible translation. By default it's NIV.
@@ -135,7 +154,7 @@ console.log("v1.0.3");
  		}
 
  		// set the already existing global variable with new options (so no var before this variable)
- 		if (!refTaggerLoaded)
+ 		if (!refTaggerTransformed)
 	 		refTagger = {
 				settings: {
 					bibleReader: "bible.faithlife",
@@ -143,7 +162,7 @@ console.log("v1.0.3");
 				}
 			};
 
-		loadRefTagger(function () {
+		transformRefTagger(function () {
 			$(".rtBibleRef").each(function(){
 				$(this).attr("data-version", translation.toLowerCase());
 			});
