@@ -1,4 +1,4 @@
-console.log("v1.6");
+console.log("v1.0.1");
 /**
  * This code is used to create an toolbar for bloggersbijbel.nl
  */
@@ -107,7 +107,7 @@ console.log("v1.6");
  	 	});
  	 }
 
-	function transformSup() {
+	function transformSup(translation) {
 		if (!refTaggerLoaded)
 	 		refTagger = {
 				settings: {
@@ -318,7 +318,7 @@ console.log("v1.6");
  	function main() {
  		showReferences();
  		setupTopBar();
- 		transformSup();
+ 		transformSup("NIV");
  		
  		// choose default translation
  		chooseTranslation("NIV");
