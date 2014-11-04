@@ -59,7 +59,7 @@
  	 * Shows references instead of verse numbers
  	 */
 
-	alert("a121");
+	alert("a123");
 
  	function showReferences() {
 	alert("b");
