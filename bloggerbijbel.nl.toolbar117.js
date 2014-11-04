@@ -59,7 +59,7 @@
  	 * Shows references instead of verse numbers
  	 */
 
-	alert("116");
+// 117	alert("116");
 
  	function showReferences() {
  		
@@ -70,7 +70,7 @@
 		loadBCVParser(function () {
 			var bcv = new bcv_parser; 
 		});
-		alert("116b");
+		alert("118");
 		var bcv = new bcv_parser;
 		alert("Gods zegen");
 		var deorigineletekst = $("h2").html();
