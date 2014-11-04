@@ -53,6 +53,7 @@
  	 		if (typeof(onLoadFunction) == 'function')
  	 			onLoadFunction();
  	 	});
+		var bcv = new bcv_parser; 
  	 }
 
  	/**
@@ -62,11 +63,11 @@
  	function showReferences() {
 
 		loadBCVParser(function () {
-//			var bcv = new bcv_parser; 
+			var bcv = new bcv_parser; 
 		});
 		alert("Gods zegen");
 		var bcv = new bcv_parser;
-		alert("104");
+		alert("106");
 		var deorigineletekst = $("h2").html();
 		var dereferenties = bcv.parse(deorigineletekst).osis();
 
