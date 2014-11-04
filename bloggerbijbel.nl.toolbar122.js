@@ -59,18 +59,20 @@
  	 * Shows references instead of verse numbers
  	 */
 
-	alert("121");
+	alert("a121");
 
  	function showReferences() {
+	alert("b");
  		
 		if (!refTaggerLoaded) {
 			var bcv = new bcv_parser;	  
  		}
- 		
+ 	alert("c");
+		
 		loadBCVParser(function () {
 			var bcv = new bcv_parser; 
 		});
-		alert("118");
+		alert("d");
 		var bcv = new bcv_parser;
 		alert("Gods zegen");
 		var deorigineletekst = $("h2").html();
