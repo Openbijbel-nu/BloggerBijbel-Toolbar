@@ -1,4 +1,4 @@
-console.log("v1.0.4");
+console.log("v1.0.5");
 /**
  * This code is used to create an toolbar for bloggersbijbel.nl
  */
@@ -61,31 +61,6 @@ console.log("v1.0.4");
 
 	console.log("Gods zegen");
 
- 	function showReferences() {
-
-		loadBCVParser(function () {
-			var bcv = new bcv_parser;
-
-			var deorigineletekst = $("h2").html();
-			var dereferenties = bcv.parse(deorigineletekst).osis();
-
-		        console.log(dereferenties);
-        		var dereferentie_arr = new Array();
-	                var dereferentie_arr = dereferenties.split(".");
-        	        var dereferentie = dereferentie_arr[0] + "." + dereferentie_arr[1];
-                	console.log(dereferentie);
-//		        var dereferenties = dereferenties.split(",").join("</span><br/><span class='BijbelVers'>");
-//			$(".row h2").append("<br/ ><h3 class='OpenBijbel-Heading'>[[|]]</h3><br/ ><span class='BijbelVers'>" + dereferenties + "</span>");
-//			$(".OpenBijbel-Heading").css("background","#465DFF").css("font-weight","bold").css("color","white");
-//			$(".BijbelVers").css("background","#BCFFB9");
-    
-	 		$(".vers sup").each(function(){
- 				var suptext = dereferentie + "." + $(this).text();
- 				$(this).text(suptext);
-			});
-		});
- 	}
-
 	function transformSup(translation) {
 		if (typeof(translation) == 'undefined') {
  			translation = 'NIV';
@@ -123,6 +98,34 @@ console.log("v1.0.4");
 			console.log("reftagger");
 		});
 	}
+
+ 	function showReferences() {
+
+		loadBCVParser(function () {
+			var bcv = new bcv_parser;
+
+			var deorigineletekst = $("h2").html();
+			var dereferenties = bcv.parse(deorigineletekst).osis();
+
+		        console.log(dereferenties);
+        		var dereferentie_arr = new Array();
+	                var dereferentie_arr = dereferenties.split(".");
+        	        var dereferentie = dereferentie_arr[0] + "." + dereferentie_arr[1];
+                	console.log(dereferentie);
+//		        var dereferenties = dereferenties.split(",").join("</span><br/><span class='BijbelVers'>");
+//			$(".row h2").append("<br/ ><h3 class='OpenBijbel-Heading'>[[|]]</h3><br/ ><span class='BijbelVers'>" + dereferenties + "</span>");
+//			$(".OpenBijbel-Heading").css("background","#465DFF").css("font-weight","bold").css("color","white");
+//			$(".BijbelVers").css("background","#BCFFB9");
+    
+	 		$(".vers sup").each(function(){
+ 				var suptext = dereferentie + "." + $(this).text();
+ 				$(this).text(suptext);
+			});
+			
+	 		transformSup("NIV");
+			
+		});
+ 	}
 
 	var refTaggerTransformed = false;
 	
@@ -341,7 +344,6 @@ console.log("v1.0.4");
  	 */
  	function main() {
  		showReferences();
- 		transformSup("NIV");
  		setupTopBar();
  		
  		// choose default translation
