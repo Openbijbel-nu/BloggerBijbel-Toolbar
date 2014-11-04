@@ -1,4 +1,4 @@
-console.log("v1.0.2");
+console.log("v1.0.3");
 /**
  * This code is used to create an toolbar for bloggersbijbel.nl
  */
@@ -123,6 +123,8 @@ console.log("v1.0.2");
 			console.log("reftagger");
 		});
 	}
+
+		 var refTaggerLoaded = false;
 
  	 /**
  	  * Loads the bible translation. By default it's NIV.
