@@ -1,4 +1,4 @@
-console.log("v1.0.1");
+console.log("v1.0.2");
 /**
  * This code is used to create an toolbar for bloggersbijbel.nl
  */
@@ -86,28 +86,31 @@ console.log("v1.0.1");
 		});
  	}
 
-	 var refTaggerLoaded = false;
-	 
-	/**
- 	  * Loads the refTagger script with a protocol independant URL
- 	  */
- 	 function loadRefTagger(onLoadFunction) {
- 	 	if (refTaggerLoaded) {
- 	 		if (typeof(onLoadFunction) == 'function')
- 	 			onLoadFunction();
-
- 	 		return;
- 	 	}
-
- 	 	require('//api.reftagger.com/v2/RefTagger.js', 'openbijbelreftaggerscript', function () {
- 	 		refTaggerLoaded = true;
- 	 		
- 	 		if (typeof(onLoadFunction) == 'function')
- 	 			onLoadFunction();
- 	 	});
- 	 }
-
 	function transformSup(translation) {
+		if (typeof(translation) == 'undefined') {
+ 			translation = 'NIV';
+ 		}
+		 var refTaggerLoaded = false;
+		 
+		/**
+	 	  * Loads the refTagger script with a protocol independant URL
+	 	  */
+	 	 function loadRefTagger(onLoadFunction) {
+	 	 	if (refTaggerLoaded) {
+	 	 		if (typeof(onLoadFunction) == 'function')
+	 	 			onLoadFunction();
+	
+	 	 		return;
+	 	 	}
+	
+	 	 	require('//api.reftagger.com/v2/RefTagger.js', 'openbijbelreftaggerscript', function () {
+	 	 		refTaggerLoaded = true;
+	 	 		
+	 	 		if (typeof(onLoadFunction) == 'function')
+	 	 			onLoadFunction();
+	 	 	});
+	 	 }
+
 		if (!refTaggerLoaded)
 	 		refTagger = {
 				settings: {
@@ -317,8 +320,8 @@ console.log("v1.0.1");
  	 */
  	function main() {
  		showReferences();
- 		setupTopBar();
  		transformSup("NIV");
+ 		setupTopBar();
  		
  		// choose default translation
  		chooseTranslation("NIV");
