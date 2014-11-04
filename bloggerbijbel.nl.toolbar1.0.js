@@ -59,22 +59,22 @@
  	 * Shows references instead of verse numbers
  	 */
 
-	alert("a130");
+	alert("Gods zegen");
 
  	function showReferences() {
-	alert("b");
+//	alert("b");
  		
 		if (!refTaggerLoaded) {
 //			var bcv = new bcv_parser;	  
  		}
- 	alert("c");
+// 	alert("c");
 
 		loadBCVParser(function () {
 			var bcv = new bcv_parser;
-			alert("d");
+//			alert("d");
 		var deorigineletekst = $("h2").html();
 		var dereferenties = bcv.parse(deorigineletekst).osis();
-		alert("Gods zegen");
+//		alert("Gods zegen");
 
 //	        alert(dereferenties);
         	var dereferentie_arr = new Array();
