@@ -1,4 +1,4 @@
-console.log("1.4");
+console.log("v1.6");
 /**
  * This code is used to create an toolbar for bloggersbijbel.nl
  */
@@ -83,41 +83,16 @@ console.log("1.4");
  				var suptext = dereferentie + "." + $(this).text();
  				$(this).text(suptext);
 			});
-
-			 var refTaggerLoaded = false;
-			/**
-		 	  * Loads the refTagger script with a protocol independant URL
-		 	  */
-		 	 function loadRefTagger(onLoadFunction) {
-		 	 	if (refTaggerLoaded) {
-		 	 		if (typeof(onLoadFunction) == 'function')
-		 	 			onLoadFunction();
-		
-		 	 		return;
-		 	 	}
-		
-		 	 	require('//api.reftagger.com/v2/RefTagger.js', 'openbijbelreftaggerscript', function () {
-		 	 		refTaggerLoaded = true;
-		 	 		
-		 	 		if (typeof(onLoadFunction) == 'function')
-		 	 			onLoadFunction();
-		 	 	});
-		 	 }
-
-			loadRefTagger(function(){
-				console.log("reftagger");
-			});
-
 		});
  	}
 
-	 var refTaggerLoaded2 = false;
+	 var refTaggerLoaded = false;
 	 
 	/**
  	  * Loads the refTagger script with a protocol independant URL
  	  */
- 	 function loadRefTagger2(onLoadFunction) {
- 	 	if (refTaggerLoaded2) {
+ 	 function loadRefTagger(onLoadFunction) {
+ 	 	if (refTaggerLoaded) {
  	 		if (typeof(onLoadFunction) == 'function')
  	 			onLoadFunction();
 
@@ -125,12 +100,26 @@ console.log("1.4");
  	 	}
 
  	 	require('//api.reftagger.com/v2/RefTagger.js', 'openbijbelreftaggerscript', function () {
- 	 		refTaggerLoaded2 = true;
+ 	 		refTaggerLoaded = true;
  	 		
  	 		if (typeof(onLoadFunction) == 'function')
  	 			onLoadFunction();
  	 	});
  	 }
+
+	function transformSup() {
+		if (!refTaggerLoaded)
+	 		refTagger = {
+				settings: {
+					bibleReader: "bible.faithlife",
+					bibleVersion: translation		
+				}
+			};
+
+		loadRefTagger(function () {
+			console.log("reftagger");
+		});
+	}
 
  	 /**
  	  * Loads the bible translation. By default it's NIV.
@@ -141,7 +130,7 @@ console.log("1.4");
  		}
 
  		// set the already existing global variable with new options (so no var before this variable)
- 		if (!refTaggerLoaded2)
+ 		if (!refTaggerLoaded)
 	 		refTagger = {
 				settings: {
 					bibleReader: "bible.faithlife",
@@ -149,7 +138,7 @@ console.log("1.4");
 				}
 			};
 
-		loadRefTagger2(function () {
+		loadRefTagger(function () {
 			$(".rtBibleRef").each(function(){
 				$(this).attr("data-version", translation.toLowerCase());
 			});
@@ -329,6 +318,7 @@ console.log("1.4");
  	function main() {
  		showReferences();
  		setupTopBar();
+ 		transformSup();
  		
  		// choose default translation
  		chooseTranslation("NIV");
