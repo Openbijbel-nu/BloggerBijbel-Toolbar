@@ -1,4 +1,4 @@
-console.log("1.5");
+console.log("1.6");
 /**
  * This code is used to create an toolbar for bloggersbijbel.nl
  */
@@ -73,49 +73,53 @@ console.log("1.5");
 			var deorigineletekst = $("h2").html();
 			var dereferenties = bcv.parse(deorigineletekst).osis();
 
-	        console.log(dereferenties);
-        	var dereferentie_arr = new Array();
-                var dereferentie_arr = dereferenties.split(".");
-                var dereferentie = dereferentie_arr[0] + "." + dereferentie_arr[1];
-                console.log(dereferentie);
-//	        var dereferenties = dereferenties.split(",").join("</span><br/><span class='BijbelVers'>");
-//		$(".row h2").append("<br/ ><h3 class='OpenBijbel-Heading'>[[|]]</h3><br/ ><span class='BijbelVers'>" + dereferenties + "</span>");
-//		$(".OpenBijbel-Heading").css("background","#465DFF").css("font-weight","bold").css("color","white");
-//		$(".BijbelVers").css("background","#BCFFB9");
+		        console.log(dereferenties);
+        		var dereferentie_arr = new Array();
+	                var dereferentie_arr = dereferenties.split(".");
+        	        var dereferentie = dereferentie_arr[0] + "." + dereferentie_arr[1];
+                	console.log(dereferentie);
+//		        var dereferenties = dereferenties.split(",").join("</span><br/><span class='BijbelVers'>");
+//			$(".row h2").append("<br/ ><h3 class='OpenBijbel-Heading'>[[|]]</h3><br/ ><span class='BijbelVers'>" + dereferenties + "</span>");
+//			$(".OpenBijbel-Heading").css("background","#465DFF").css("font-weight","bold").css("color","white");
+//			$(".BijbelVers").css("background","#BCFFB9");
     
 	 		$(".vers sup").each(function(){
  				var suptext = dereferentie + "." + $(this).text();
  				$(this).text(suptext);
 			});
+
+			 var refTaggerLoaded = false;
+		
+		 	 /**
+		 	  * Loads the refTagger script with a protocol independant URL
+		 	  */
+		 	 function loadRefTagger(onLoadFunction) {
+		 	 	if (refTaggerLoaded) {
+		 	 		if (typeof(onLoadFunction) == 'function')
+		 	 			onLoadFunction();
+		
+		 	 		return;
+		 	 	}
+		
+		 	 	require('//api.reftagger.com/v2/RefTagger.js', 'openbijbelreftaggerscript', function () {
+		 	 		refTaggerLoaded = true;
+		 	 		
+		 	 		if (typeof(onLoadFunction) == 'function')
+		 	 			onLoadFunction();
+		 	 	});
+		 	 }
+		
+			function transformSup() {
+				loadRefTagger(function () {
+					console.log("loadRefTagger");
+				});
+			}
+			
+			transformSup();
+
 		});
  	}
 
-	 var refTaggerLoaded = false;
-
- 	 /**
- 	  * Loads the refTagger script with a protocol independant URL
- 	  */
- 	 function loadRefTagger(onLoadFunction) {
- 	 	if (refTaggerLoaded) {
- 	 		if (typeof(onLoadFunction) == 'function')
- 	 			onLoadFunction();
-
- 	 		return;
- 	 	}
-
- 	 	require('//api.reftagger.com/v2/RefTagger.js', 'openbijbelreftaggerscript', function () {
- 	 		refTaggerLoaded = true;
- 	 		
- 	 		if (typeof(onLoadFunction) == 'function')
- 	 			onLoadFunction();
- 	 	});
- 	 }
-
-	function transformSup() {
-		loadRefTagger(function () {
-			console.log("loadRefTagger");
-		});
-	}
  	 /**
  	  * Loads the bible translation. By default it's NIV.
  	  */
@@ -312,7 +316,6 @@ console.log("1.5");
  	 */
  	function main() {
  		showReferences();
- 		transformSup();
  		setupTopBar();
  		
  		// choose default translation
