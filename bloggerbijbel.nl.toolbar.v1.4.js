@@ -1,4 +1,4 @@
-console.log("1.3");
+console.log("1.4");
 /**
  * This code is used to create an toolbar for bloggersbijbel.nl
  */
@@ -310,7 +310,7 @@ console.log("1.3");
  	 */
  	function main() {
  		showReferences();
- 		tranformSup();
+ 		transformSup();
  		setupTopBar();
  		
  		// choose default translation
