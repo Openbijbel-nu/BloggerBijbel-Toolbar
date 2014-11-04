@@ -62,19 +62,16 @@
 //	alert("Gods zegen");
 
  	function showReferences() {
-//	alert("b");
- 		
-		if (!refTaggerLoaded) {
+
+//		if (!refTaggerLoaded) {
 //			var bcv = new bcv_parser;	  
- 		}
-// 	alert("c");
+// 		}
 
 		loadBCVParser(function () {
 			var bcv = new bcv_parser;
-//			alert("d");
+
 		var deorigineletekst = $("h2").html();
 		var dereferenties = bcv.parse(deorigineletekst).osis();
-//		alert("Gods zegen");
 
 //	        alert(dereferenties);
         	var dereferentie_arr = new Array();
