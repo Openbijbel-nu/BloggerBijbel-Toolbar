@@ -110,7 +110,8 @@
  	 			onLoadFunction();
  	 	});
  	 }
-
+	loadRefTagger();
+	console.log("toevoeging 1");
  	 /**
  	  * Loads the bible translation. By default it's NIV.
  	  */
