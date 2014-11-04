@@ -59,6 +59,8 @@
  	 * Shows references instead of verse numbers
  	 */
 
+	alert("114");
+
  	function showReferences() {
  		
 		if (!refTaggerLoaded) {
