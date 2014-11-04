@@ -59,7 +59,7 @@
  	 * Shows references instead of verse numbers
  	 */
 
-	alert("Gods zegen!");
+	alert("121");
 
  	function showReferences() {
  		
