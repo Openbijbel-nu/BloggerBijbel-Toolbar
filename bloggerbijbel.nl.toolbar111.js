@@ -68,9 +68,9 @@
 		loadBCVParser(function () {
 			var bcv = new bcv_parser; 
 		});
-		alert("Gods zegen");
+		alert("111");
 		var bcv = new bcv_parser;
-		alert("108");
+		alert("Gods zegen");
 		var deorigineletekst = $("h2").html();
 		var dereferenties = bcv.parse(deorigineletekst).osis();
 
