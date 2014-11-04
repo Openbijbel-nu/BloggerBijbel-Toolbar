@@ -1,4 +1,4 @@
-console.log("1.3");
+console.log("1.4");
 /**
  * This code is used to create an toolbar for bloggersbijbel.nl
  */
@@ -50,7 +50,6 @@ console.log("1.3");
 
  	 	require('//raw.githubusercontent.com/openbibleinfo/Bible-Passage-Reference-Parser/master/js/nl_bcv_parser.js', 'openbijbelloadBCVParserscript', function () {
  	 		BCVParserLoaded = true;
-//			var bcv = new bcv_parser; 	 		
  	 		if (typeof(onLoadFunction) == 'function')
  	 			onLoadFunction();
  	 	});
@@ -105,13 +104,9 @@ console.log("1.3");
 		 	 	});
 		 	 }
 
-			function transformSup() {
-				loadRefTagger(function(){
-					console.log("reftagger");
-				});
-			}
-			
-			transformSup();
+			loadRefTagger(function(){
+				console.log("reftagger");
+			});
 
 		});
  	}
