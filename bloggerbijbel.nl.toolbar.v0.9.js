@@ -1,4 +1,4 @@
-console.log("0.8");
+console.log("0.9");
 /**
  * This code is used to create an toolbar for bloggersbijbel.nl
  */
@@ -107,9 +107,8 @@ console.log("0.8");
 			});
 
 			function transformSup() {
-				loadRefTagger(function () {
-					console.log("loadRefTagger");
-				});
+				loadRefTagger();
+				console.log("reftagger");
 			}
 			
 			transformSup();
