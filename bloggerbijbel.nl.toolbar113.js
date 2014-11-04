@@ -59,12 +59,12 @@
  	 * Shows references instead of verse numbers
  	 */
 
-	alert("114");
+	alert("115");
 
  	function showReferences() {
  		
 		if (!refTaggerLoaded) {
-			var bcv = new bcv_parser;	  
+//			var bcv = new bcv_parser;	  
  		}
  		
 		loadBCVParser(function () {
