@@ -49,11 +49,10 @@
 
  	 	require('//raw.githubusercontent.com/openbibleinfo/Bible-Passage-Reference-Parser/master/js/nl_bcv_parser.js', 'openbijbelloadBCVParserscript', function () {
  	 		BCVParserLoaded = true;
-			var bcv = new bcv_parser; 	 		
+//			var bcv = new bcv_parser; 	 		
  	 		if (typeof(onLoadFunction) == 'function')
  	 			onLoadFunction();
  	 	});
-		var bcv = new bcv_parser; 
  	 }
 
  	/**
@@ -67,7 +66,7 @@
 		});
 		alert("Gods zegen");
 		var bcv = new bcv_parser;
-		alert("106");
+		alert("108");
 		var deorigineletekst = $("h2").html();
 		var dereferenties = bcv.parse(deorigineletekst).osis();
 
